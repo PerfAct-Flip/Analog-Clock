@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: rgb(39, 39, 40);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+#ClockContainer{
+    position: relative;
+    margin: 0 auto;
+    background: url("clock_bg.png") no-repeat;
+    /* background-color: rgb(39, 39, 40); */
+    background-size: 100%;
+    height: 70vw;
+    width: 70vw;
+    border-radius: 50%;
+    border: 4px solid rgb(196, 196, 196); 
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 20px rgba(0,0,0,0.7);
+    font-size: 2em;
+    font-weight: 550;
+    /* justify-content: center; */
+    /* align-items: center; */
+ 
+
+}
+
+#clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#clock li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg *var(--i)));
+    inset: 5px;
+}
+#clock li span{
+    transform: rotate(calc(-30deg *var(--i)));
+    display: inline-block;
+    padding: 3px;
+}
+#hrs, #min, #sec, #circle{
+    position: absolute;
+    /* background-color: black; */
+    border-radius: 20px;
+    transform-origin: bottom;
+}
+#hrs{
+    /* display: none; */
+    background-color: rgb(255, 255, 255);
+    width: 1%;
+    height: 25%;
+    /* z-index:1; */
+    opacity:0.4 ;
+    top: 26.5%;
+    left: 51%;
+    
+}
+#min{
+    /* display: none; */
+    background-color: rgb(255, 255, 255);
+    width: 0.85%;
+    height: 30%;
+    /* z-index:2; */
+    opacity: 0.7;
+    top: 22%;
+    left: 51%;
+    
+
+}
+#sec{
+    /* display: none; */
+    background-color: rgb(255, 255, 255);
+    width: 0.75%;
+    height: 40%;
+    /* z-index: 3; */
+    opacity: 1;
+    top: 11%;
+    left: 51%;
+}
+
+#circle{
+    width: 3%;
+    height: 3%;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+}
